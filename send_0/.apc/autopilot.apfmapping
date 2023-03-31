@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="send.h" path="F:\Workplace\vivadoProject\hls\send.h"/>
+    <originFiles name="send.c" path="F:\Workplace\vivadoProject\hls\send.c"/>
+    <originFiles name="clipping.c" path="F:\Workplace\vivadoProject\hls\clipping.c"/>
+    <originFiles name="clipping.h" path="F:\Workplace\vivadoProject\hls\clipping.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tbsend.cpp" path="F:\Workplace\vivadoProject\hls\tbsend.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

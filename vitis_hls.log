@@ -1,0 +1,61 @@
+INFO: [HLS 200-10] Running 'F:/Workplace/vivado/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'LXD' on host 'laptop-r7ukn38i' (Windows NT_amd64 version 6.2) on Thu Mar 30 22:17:08 +0800 2023
+INFO: [HLS 200-10] In directory 'F:/Workplace/vivadoProject/hls'
+Sourcing Tcl script 'F:/Workplace/vivadoProject/hls/send_0/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: open_project send_0 
+INFO: [HLS 200-10] Opening project 'F:/Workplace/vivadoProject/hls/send_0'.
+INFO: [HLS 200-1510] Running: set_top send 
+INFO: [HLS 200-1510] Running: add_files clipping.c 
+INFO: [HLS 200-10] Adding design file 'clipping.c' to the project
+INFO: [HLS 200-1510] Running: add_files clipping.h 
+INFO: [HLS 200-10] Adding design file 'clipping.h' to the project
+INFO: [HLS 200-1510] Running: add_files send.c 
+INFO: [HLS 200-10] Adding design file 'send.c' to the project
+INFO: [HLS 200-1510] Running: add_files send.h 
+INFO: [HLS 200-10] Adding design file 'send.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tbsend.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tbsend.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'F:/Workplace/vivadoProject/hls/send_0/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tbsend.cpp in debug mode
+   Compiling(apcc) ../../../../send.c in debug mode
+INFO: [HLS 200-10] Running 'F:/Workplace/vivado/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'LXD' on host 'laptop-r7ukn38i' (Windows NT_amd64 version 6.2) on Thu Mar 30 22:17:13 +0800 2023
+INFO: [HLS 200-10] In directory 'F:/Workplace/vivadoProject/hls/send_0/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../clipping.c in debug mode
+INFO: [HLS 200-10] Running 'F:/Workplace/vivado/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'LXD' on host 'laptop-r7ukn38i' (Windows NT_amd64 version 6.2) on Thu Mar 30 22:17:19 +0800 2023
+INFO: [HLS 200-10] In directory 'F:/Workplace/vivadoProject/hls/send_0/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Makefile.rules:392: recipe for target 'csim.exe' failed
+obj/tbsend.o: In function `save(double*, double)':
+F:\Workplace\vivadoProject\hls\send_0\solution1\csim\build/../../../../send.c:115: undefined reference to `clipping(double*, int, int, double)'
+collect2.exe: error: ld returned 1 exit status
+make: *** [csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 12.503 seconds; current allocated memory: 172.467 MB.
+4
+    while executing
+"source F:/Workplace/vivadoProject/hls/send_0/solution1/csim.tcl"
+    invoked from within
+"hls::main F:/Workplace/vivadoProject/hls/send_0/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
